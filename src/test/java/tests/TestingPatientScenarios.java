@@ -71,7 +71,6 @@
     
     
         }
-/*
         //Scenario 2: Mandatory Field Validation
         @Severity(SeverityLevel.CRITICAL)
         @Story("Scenario 2: Mandatory Field Validation")
@@ -168,4 +167,4 @@
             Thread.sleep(2000);
             patientObject.clickOnLogOut();
         }
-  */  }
+    }
