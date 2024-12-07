@@ -1,0 +1,19 @@
+[
+  {
+
+    "email" : "jamela.saadi@carepointmedical.ae",
+    "password" : "Jasa@1234",
+    "firstName": "fares",
+    "lastName": "maher",
+    "gender": "male",
+    "mobile":"01025369026",
+    "emailAddress":"fares.maher@gmail.com",
+    "dataOfBirth": "01/01/1997",
+    "nationalIdCheck": "255464694666656",
+    "fullNameCheck": "emad maher",
+    "mobileCheck": "01023659865",
+    "emailAddressCheck": "maherosman@gmail.com"
+
+  }
+
+]
