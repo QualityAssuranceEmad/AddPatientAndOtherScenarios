@@ -71,7 +71,7 @@
     
     
         }
-/*        //Scenario 2: Mandatory Field Validation
+        //Scenario 2: Mandatory Field Validation
         @Severity(SeverityLevel.CRITICAL)
         @Story("Scenario 2: Mandatory Field Validation")
         @Description("in this test case 2 i sea if i click save patient withOut entering mandatory filed to validate error message")
@@ -166,5 +166,5 @@
             System.out.println(patientObject.AssertNumberOfRwo.getText());
             Thread.sleep(2000);
             patientObject.clickOnLogOut();
-        }*/
+        }
     }
