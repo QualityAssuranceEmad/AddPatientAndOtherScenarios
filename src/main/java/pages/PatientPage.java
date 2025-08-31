@@ -14,197 +14,198 @@ public class PatientPage extends PageBase {
 
     }
 
-    //logoutWebElement
-    @FindBy(xpath = "/html/body/div[1]/header/div/div[3]/ul/li[5]/a/span[1]")
-    WebElement logOutButton1;
-    @FindBy(xpath = "/html/body/div[1]/header/div/div[3]/ul/li[5]/div/a[8]")
-    WebElement logOutButton2;
-    //webElements to reach the full patient page
-    @FindBy(xpath = "//*[@id=\"login_email\"]")
-    public WebElement LoginEmail;
-    @FindBy(xpath = "//*[@id=\"login_password\"]")
-    public WebElement passoward;
-    @FindBy(xpath = "/html/body/div/div/main/div[2]/div/section[1]/div[2]/form/div[2]/div[1]/button")
-    public WebElement loginButton;
-    @FindBy(xpath = "/html/body/app-root/app-app-layout/div/app-header/div/a/span")
-    public WebElement messageLogin;
-    @FindBy(xpath = "//a[@href='/app/healthcare']")
-    public WebElement healthcareSection;
-    @FindBy(xpath = "(//div[@class='widget widget-shadow shortcut-widget-box'])[5]")
-    public WebElement patientSection;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/button[2]")
-    public WebElement addPatient;
-    @FindBy(xpath = "/html/body/div[6]/div/div/div[3]/div[1]/button")
+    // Logout Webelements
+@FindBy(xpath = "//a[contains(@href, '#log-out')]/span[1]")
+WebElement logOutButton1;
+@FindBy(xpath = "//a[contains(@href, '#log-out')]")
+WebElement logOutButton2;
 
-    public WebElement fullPatientForm;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[1]/div/div/div[1]/div/div/div[1]/h3")
-    public WebElement newPatientPage;
-    //Patent Name Deatalis
+// WebElements to reach the full patient page
+@FindBy(xpath = "//input[@id='login_email']")
+public WebElement LoginEmail;
+@FindBy(xpath = "//input[@id='login_password']")
+public WebElement passoward;
+@FindBy(xpath = "//button[text()='Login']")
+public WebElement loginButton;
+@FindBy(xpath = "//span[text()='Healthcare']")
+public WebElement messageLogin;
+@FindBy(xpath = "//a[@href='/app/healthcare']")
+public WebElement healthcareSection;
+@FindBy(xpath = "//div[contains(@class, 'shortcut-widget-box')][5]")
+public WebElement patientSection;
+@FindBy(xpath = "//button[text()='Add Patient']")
+public WebElement addPatient;
+@FindBy(xpath = "//button[text()='Full Patient Form']")
+public WebElement fullPatientForm;
+@FindBy(xpath = "//h3[text()='New Patient']")
+public WebElement newPatientPage;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/input")
-    public WebElement FirstName;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/input")
-    WebElement MiddleName;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[2]/div[2]/div[3]/form/div[2]/div/div[2]/div[1]/input")
-    public WebElement LastName;
-    //patient Demographics
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/input")
-    public WebElement GederDropDownMenu;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/ul")
+// Patient Name Details
+@FindBy(xpath = "//input[@data-fieldname='first_name']")
+public WebElement FirstName;
+@FindBy(xpath = "//input[@data-fieldname='middle_name']")
+WebElement MiddleName;
+@FindBy(xpath = "//input[@data-fieldname='last_name']")
+public WebElement LastName;
 
-    List<WebElement> ChooseGender;
+// Patient Demographics
+@FindBy(xpath = "//input[@data-fieldname='gender']")
+public WebElement GederDropDownMenu;
+@FindBy(xpath = "//input[@data-fieldname='gender']/following-sibling::ul")
+List<WebElement> ChooseGender;
+@FindBy(xpath = "//input[@data-fieldname='address']")
+WebElement Address;
+@FindBy(xpath = "//select[@data-fieldname='report_preference']")
+WebElement ReportPreferenceDropDownMenu;
+@FindBy(xpath = "//input[@data-fieldname='nationality']")
+WebElement NationalityDropDownMenu;
+@FindBy(xpath = "//input[@data-fieldname='nationality']/following-sibling::ul")
+List<WebElement> ChooseNationality;
+@FindBy(xpath = "//input[@data-fieldname='mobile']")
+public WebElement MobileNumber;
+@FindBy(xpath = "//input[@data-fieldname='national_id']")
+WebElement NationalityId;
+@FindBy(xpath = "//input[@data-fieldname='email']")
+public WebElement Email;
+@FindBy(xpath = "//select[@data-fieldname='residence_type']")
+WebElement ResidenceTypeList;
+@FindBy(xpath = "//input[@data-fieldname='phone']")
+WebElement Phone;
+@FindBy(xpath = "//select[@data-fieldname='blood_group']")
+WebElement BloodGroupList;
+@FindBy(xpath = "//input[@data-fieldname='weight']")
+WebElement Weight;
+@FindBy(xpath = "//input[@data-fieldname='date_of_birth']")
+public WebElement DateOfBarth;
+@FindBy(xpath = "//input[@data-fieldname='insurance_check']")
+WebElement InsuranceCheckBox;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[2]/div/div[2]/div[1]/input")
-    WebElement Address;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[4]/div/div[2]/div[1]/select")
-    WebElement ReportPreferenceDropDownMenu;
+// Customer details section
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='Customer Details']]")
+WebElement ClickCustomerDetailsSection;
+@FindBy(xpath = "//input[@data-fieldname='customer']")
+WebElement Customer;
+@FindBy(xpath = "//input[@data-fieldname='customer']/following-sibling::ul")
+List<WebElement> ChoosingCustomerEmail;
+@FindBy(xpath = "//input[@data-fieldname='billing_currency']")
+WebElement BillingCurrency;
+@FindBy(xpath = "//input[@data-fieldname='billing_currency']/following-sibling::ul")
+List<WebElement> ChoosingBillingCurrency;
+@FindBy(xpath = "//input[@data-fieldname='customer_group']")
+WebElement CustomerGroup;
+@FindBy(xpath = "//input[@data-fieldname='customer_group']/following-sibling::ul")
+List<WebElement> ChooseGroup;
+@FindBy(xpath = "//input[@data-fieldname='default_price_list']")
+WebElement DefaultPriceList;
+@FindBy(xpath = "//input[@data-fieldname='default_price_list']/following-sibling::ul")
+List<WebElement> ChoosingDefaultPriceList;
+@FindBy(xpath = "//input[@data-fieldname='territory']")
+WebElement Territory;
+@FindBy(xpath = "//input[@data-fieldname='territory']/following-sibling::ul")
+List<WebElement> ChoosingTerritories;
+@FindBy(xpath = "//input[@data-fieldname='print_language']")
+WebElement PrintLanguage;
+@FindBy(xpath = "//input[@data-fieldname='print_language']/following-sibling::ul")
+List<WebElement> ChoosingLanguage;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/div/div/input")
-    WebElement NationalityDropDownMenu;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChooseNationality;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[5]/div/div[2]/div[1]/input")
-    public WebElement MobileNumber;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[4]/div/div[2]/div[1]/input")
-    WebElement NationalityId;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[6]/div/div[2]/div[1]/input")
-    public WebElement Email;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[5]/div/div[2]/div[1]/select")
-    WebElement ResidenceTypeList;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[7]/div/div[2]/div[1]/input")
-    WebElement Phone;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[6]/div/div[2]/div[1]/select")
-    WebElement BloodGroupList;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[8]/div/div[2]/div[1]/input")
-    WebElement Weight;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[1]/form/div[7]/div/div[2]/div[1]/input")
-    public WebElement DateOfBarth;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[3]/div[2]/div[2]/form/div[9]/div/label/span[1]/input")
-    WebElement InsuranceCheckBox;
-    //customer details section
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[1]")
-    WebElement ClickCustomerDetailsSection;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/input")
-    WebElement Customer;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChoosingCustomerEmail;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[1]/div/div[2]/div[1]/div/div/input")
-    WebElement BillingCurrency;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[1]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChoosingBillingCurrency;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[2]/div/div[2]/div[1]/div/div/input")
-    WebElement CustomerGroup;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[2]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChooseGroup;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/div/div/input")
-    WebElement DefaultPriceList;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChoosingDefaultPriceList;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/div/div/input")
-    WebElement Territory;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChoosingTerritories;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[3]/div/div[2]/div[1]/div/div/input")
-    WebElement PrintLanguage;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[4]/div[2]/div[2]/form/div[3]/div/div[2]/div[1]/div/div/ul")
-    List<WebElement> ChoosingLanguage;
-    //personal and social history
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[5]/div[1]")
-    WebElement ClickOnPersonalSection;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[5]/div[2]/div[1]/form/div/div/div[2]/div[1]/input")
-    WebElement Occupation;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[5]/div[2]/div[2]/form/div/div/div[2]/div[1]/select")
-    WebElement MaritalStatusDropDown;
-    //Patient Relation Section
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[1]")
-    WebElement ClickRelationSection;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[3]/div/div[1]/button[4]")
-    WebElement AddRowButton;
+// Personal and social history
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='Personal and Social History']]")
+WebElement ClickOnPersonalSection;
+@FindBy(xpath = "//input[@data-fieldname='occupation']")
+WebElement Occupation;
+@FindBy(xpath = "//select[@data-fieldname='marital_status']")
+WebElement MaritalStatusDropDown;
 
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/div/div/input")
-    WebElement PatientName2;
+// Patient Relation Section
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='Patient Relation']]")
+WebElement ClickRelationSection;
+@FindBy(xpath = "//div[contains(@class, 'grid-add-row')]//button[contains(@class, 'btn-primary')]")
+WebElement AddRowButton;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//input[@data-fieldname='patient_name']")
+WebElement PatientName2;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//select[@data-fieldname='relation']")
+WebElement RelationDropDown2;
+@FindBy(xpath = "//div[@class='grid-row-actions']//button[contains(@class, 'btn-edit')]")
+WebElement ClickOnEditPatient;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//textarea[@data-fieldname='description']")
+WebElement Description;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//button[contains(text(),'Save')]")
+WebElement ClickingSave;
 
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[2]/div/div[2]/div[1]/select")
-    WebElement RelationDropDown2;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div/div[4]/div")
-    WebElement ClickOnEditPatient;
+// Allergies, Medical and Surgical History
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='Allergies, Medical and Surgical History']]")
+WebElement AllergiesAndSurgicalHistory;
+@FindBy(xpath = "//input[@data-fieldname='allergies']")
+WebElement Allergies;
+@FindBy(xpath = "//ul[contains(@class, 'awesomplete-auto')]//li[1]")
+WebElement ChoosingAllergies;
+@FindBy(xpath = "//textarea[@data-fieldname='surgical_history']")
+WebElement SurgicalHistory;
+@FindBy(xpath = "//textarea[@data-fieldname='medication']")
+WebElement Medication;
+@FindBy(xpath = "//textarea[@data-fieldname='gyne_and_obs_history']")
+WebElement GyneAndOBSHistoryIncludingTheLMP;
+@FindBy(xpath = "//textarea[@data-fieldname='medical_history']")
+WebElement MedicalHistory;
 
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/textarea")
-    WebElement Description;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[6]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/span[2]/button[1]")
-    WebElement ClickingSave;
+// Risk Factors section
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='Risk Factors']]")
+WebElement ClickingRiskSection;
+@FindBy(xpath = "//input[@data-fieldname='tobacco_consumption_past']")
+WebElement TobaccoConsumptionPast;
+@FindBy(xpath = "//input[@data-fieldname='tobacco_consumption_present']")
+WebElement TobaccoConsumptionPresent;
+@FindBy(xpath = "//input[@data-fieldname='alcohol_consumption_past']")
+WebElement AlcoholConsumptionPast;
+@FindBy(xpath = "//input[@data-fieldname='alcohol_consumption_present']")
+WebElement AlcoholConsumptionPresent;
+@FindBy(xpath = "//textarea[@data-fieldname='occupational_hazards_and_environmental_factors']")
+WebElement OccupationalHazardsAndEnvironmentalFactors;
+@FindBy(xpath = "//textarea[@data-fieldname='other_risk_factors']")
+WebElement OtherRiskFactors;
 
-    //Allergies, Medical and Surgical History
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[1]")
-    WebElement AllergiesAndSurgicalHistory;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/input")
-    WebElement Allergies;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/div/div/ul/li[1]")
-    WebElement ChoosingAllergies;
-    @FindBy(xpath = "//textarea[@data-fieldname='surgical_history']")
-    WebElement SurgicalHistory;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[2]/div[1]/form/div[2]/div/div[2]/div[1]/textarea")
-    WebElement Medication;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/textarea")
-    WebElement GyneAndOBSHistoryIncludingTheLMP;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[7]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/textarea")
-    WebElement MedicalHistory;
-    //Risk Factors section
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[1]")
-    WebElement ClickingRiskSection;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[1]/form/div[1]/div/div[2]/div[1]/input")
-    WebElement TobaccoConsumptionPast;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[1]/form/div[2]/div/div[2]/div[1]/input")
-    WebElement TobaccoConsumptionPresent;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[1]/form/div[3]/div/div[2]/div[1]/input")
-    WebElement AlcoholConsumptionPast;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[1]/form/div[4]/div/div[2]/div[1]/input")
-    WebElement AlcoholConsumptionPresent;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[2]/form/div[1]/div/div[2]/div[1]/textarea")
-    WebElement OccupationalHazardsAndEnvironmentalFactors;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[8]/div[2]/div[2]/form/div[2]/div/div[2]/div[1]/textarea")
-    WebElement OtherRiskFactors;
-    // More Information Section
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[9]/div[1]")
-    WebElement ClickingMoreInformation;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[9]/div[2]/div/form/div/div/div[2]/div[1]/textarea")
-    WebElement PatientDetails;
-    //INSURANCE PLANS section
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[3]/div/div[1]/button[4]")
-    WebElement AddROWINSURANCEPLANS;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[2]/div[2]/div[1]/div/div/div[5]/div")
-    WebElement ClickEditingPlan;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/div/div/input")
-    WebElement InsurancePlan;
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/div/div/ul/li[1]")
-    WebElement ChoosingPlaneInsurance;
-    @FindBy(css = "input[data-fieldname='expiry_date']")
-    WebElement ExpiryDate;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/input")
-    WebElement MemberCardID;
-    @FindBy(xpath = "//*[@id=\"page-Patient\"]/div[2]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div/div/div[3]/div[10]/div[2]/div/form/div[1]/div[2]/div[2]/div[1]/div/div[2]/div[1]/div/span[2]/button[1]")
-    WebElement savingInsurance;
+// More Information Section
+@FindBy(xpath = "//div[contains(@class, 'collapsible-area') and .//span[text()='More Information']]")
+WebElement ClickingMoreInformation;
+@FindBy(xpath = "//textarea[@data-fieldname='patient_details']")
+WebElement PatientDetails;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div[1]/div/div/div[2]/div[3]/button[2]")
-    WebElement ClickingSavePatient;
-    @FindBy(className = "msgprint")
-    public WebElement AssertMandatory;
-    @FindBy(xpath = "/html/body/div[7]/div/div/div[2]/div[1]/div")
-    public WebElement AssertDateOfBirthFormateValdation;
-    @FindBy(css = "input[data-fieldname='national_id']")
-    public WebElement FilteringByNationalId;
-    @FindBy(css = "input[data-fieldname='patient_name']")
-    public WebElement FilteringByFullName;
-    @FindBy(css = "input[data-fieldname='mobile']")
-    public WebElement FilteringByMobile;
-    @FindBy(css = "input[data-fieldname='email']")
-    public WebElement FilteringByEmail;
-    @FindBy(xpath = "/html/body/div[7]/div/div/div[1]/div[2]/button[2]")
-   public WebElement clickCloseErrorMessageForMandatory;
-    @FindBy(xpath = "/html/body/div[7]/div/div/div[1]/div[2]/button[2]")
-    public WebElement clickCloseErrorMessageForDateOfBarth;
-    @FindBy(xpath = "//div[@class='level-right']/span[@class='list-count']/span")
-    public WebElement AssertNumberOfRwo;
+// INSURANCE PLANS section
+@FindBy(xpath = "//div[contains(@class, 'grid-add-row')]//button[contains(@class, 'btn-primary')]")
+WebElement AddROWINSURANCEPLANS;
+@FindBy(xpath = "//div[@class='grid-row-actions']//button[contains(@class, 'btn-edit')]")
+WebElement ClickEditingPlan;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//input[@data-fieldname='insurance_plan']")
+WebElement InsurancePlan;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//input[@data-fieldname='insurance_plan']/following-sibling::ul/li[1]")
+WebElement ChoosingPlaneInsurance;
+@FindBy(xpath = "//input[@data-fieldname='expiry_date']")
+WebElement ExpiryDate;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//input[@data-fieldname='member_card_id']")
+WebElement MemberCardID;
+@FindBy(xpath = "//div[contains(@class, 'form-in-grid')]//button[contains(text(),'Save')]")
+WebElement savingInsurance;
+
+@FindBy(xpath = "//button[contains(text(), 'Save')]")
+WebElement ClickingSavePatient;
+@FindBy(className = "msgprint")
+public WebElement AssertMandatory;
+@FindBy(xpath = "//div[contains(@class, 'modal-dialog')]//div[@class='modal-body']")
+public WebElement AssertDateOfBirthFormateValdation;
+@FindBy(css = "input[data-fieldname='national_id']")
+public WebElement FilteringByNationalId;
+@FindBy(css = "input[data-fieldname='patient_name']")
+public WebElement FilteringByFullName;
+@FindBy(css = "input[data-fieldname='mobile']")
+public WebElement FilteringByMobile;
+@FindBy(css = "input[data-fieldname='email']")
+public WebElement FilteringByEmail;
+@FindBy(xpath = "//div[contains(@class, 'modal-footer')]//button[text()='Close']")
+public WebElement clickCloseErrorMessageForMandatory;
+@FindBy(xpath = "//div[contains(@class, 'modal-footer')]//button[text()='Close']")
+public WebElement clickCloseErrorMessageForDateOfBarth;
+@FindBy(xpath = "//span[contains(@class, 'list-count')]")
+public WebElement AssertNumberOfRwo;
     @Step("Login Step with username :{0} ,password:{1}")
     public void loginToMyAcount(String email, String pass) {
 
